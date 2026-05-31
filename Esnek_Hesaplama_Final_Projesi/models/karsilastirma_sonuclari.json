@@ -1,0 +1,17 @@
+{
+  "klasik_sugeno": {
+    "model": "Klasik Sugeno",
+    "RMSE": 0.1824,
+    "MAE": 0.1567,
+    "MAPE": 239.44,
+    "R2": 0.5809
+  },
+  "ga_sugeno": {
+    "model": "GA-Sugeno",
+    "RMSE": 0.1938,
+    "MAE": 0.1547,
+    "MAPE": 295.61,
+    "R2": 0.5268
+  },
+  "rmse_iyilesmesi_pct": -6.25
+}
