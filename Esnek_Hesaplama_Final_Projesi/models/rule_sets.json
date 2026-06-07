@@ -1,0 +1,1130 @@
+{
+  "Student": [
+    {
+      "id": 1,
+      "antecedent": [
+        "Low",
+        "Low",
+        "Low"
+      ],
+      "consequent": {
+        "p1": 0.8,
+        "p2": 0.6,
+        "p3": -0.4,
+        "c": 0.05
+      }
+    },
+    {
+      "id": 2,
+      "antecedent": [
+        "Low",
+        "Low",
+        "Medium"
+      ],
+      "consequent": {
+        "p1": 0.7,
+        "p2": 0.5,
+        "p3": -0.5,
+        "c": 0.08
+      }
+    },
+    {
+      "id": 3,
+      "antecedent": [
+        "Low",
+        "Low",
+        "High"
+      ],
+      "consequent": {
+        "p1": 0.6,
+        "p2": 0.4,
+        "p3": -0.6,
+        "c": 0.1
+      }
+    },
+    {
+      "id": 4,
+      "antecedent": [
+        "Low",
+        "Medium",
+        "Low"
+      ],
+      "consequent": {
+        "p1": 0.9,
+        "p2": 0.8,
+        "p3": -0.3,
+        "c": 0.06
+      }
+    },
+    {
+      "id": 5,
+      "antecedent": [
+        "Low",
+        "Medium",
+        "Medium"
+      ],
+      "consequent": {
+        "p1": 0.8,
+        "p2": 0.7,
+        "p3": -0.4,
+        "c": 0.09
+      }
+    },
+    {
+      "id": 6,
+      "antecedent": [
+        "Low",
+        "Medium",
+        "High"
+      ],
+      "consequent": {
+        "p1": 0.7,
+        "p2": 0.6,
+        "p3": -0.5,
+        "c": 0.12
+      }
+    },
+    {
+      "id": 7,
+      "antecedent": [
+        "Low",
+        "High",
+        "Low"
+      ],
+      "consequent": {
+        "p1": 1.0,
+        "p2": 1.0,
+        "p3": -0.2,
+        "c": 0.08
+      }
+    },
+    {
+      "id": 8,
+      "antecedent": [
+        "Low",
+        "High",
+        "Medium"
+      ],
+      "consequent": {
+        "p1": 0.9,
+        "p2": 0.9,
+        "p3": -0.3,
+        "c": 0.11
+      }
+    },
+    {
+      "id": 9,
+      "antecedent": [
+        "Medium",
+        "Low",
+        "Low"
+      ],
+      "consequent": {
+        "p1": 1.1,
+        "p2": 0.5,
+        "p3": -0.3,
+        "c": 0.1
+      }
+    },
+    {
+      "id": 10,
+      "antecedent": [
+        "Medium",
+        "Low",
+        "Medium"
+      ],
+      "consequent": {
+        "p1": 1.0,
+        "p2": 0.4,
+        "p3": -0.4,
+        "c": 0.13
+      }
+    },
+    {
+      "id": 11,
+      "antecedent": [
+        "Medium",
+        "Medium",
+        "Low"
+      ],
+      "consequent": {
+        "p1": 1.2,
+        "p2": 0.8,
+        "p3": -0.2,
+        "c": 0.12
+      }
+    },
+    {
+      "id": 12,
+      "antecedent": [
+        "Medium",
+        "Medium",
+        "Medium"
+      ],
+      "consequent": {
+        "p1": 1.1,
+        "p2": 0.7,
+        "p3": -0.3,
+        "c": 0.15
+      }
+    },
+    {
+      "id": 13,
+      "antecedent": [
+        "Medium",
+        "Medium",
+        "High"
+      ],
+      "consequent": {
+        "p1": 1.0,
+        "p2": 0.6,
+        "p3": -0.4,
+        "c": 0.18
+      }
+    },
+    {
+      "id": 14,
+      "antecedent": [
+        "Medium",
+        "High",
+        "Low"
+      ],
+      "consequent": {
+        "p1": 1.3,
+        "p2": 1.1,
+        "p3": -0.1,
+        "c": 0.14
+      }
+    },
+    {
+      "id": 15,
+      "antecedent": [
+        "Medium",
+        "High",
+        "Medium"
+      ],
+      "consequent": {
+        "p1": 1.2,
+        "p2": 1.0,
+        "p3": -0.2,
+        "c": 0.17
+      }
+    },
+    {
+      "id": 16,
+      "antecedent": [
+        "High",
+        "Low",
+        "Low"
+      ],
+      "consequent": {
+        "p1": 1.4,
+        "p2": 0.4,
+        "p3": -0.2,
+        "c": 0.15
+      }
+    },
+    {
+      "id": 17,
+      "antecedent": [
+        "High",
+        "Low",
+        "Medium"
+      ],
+      "consequent": {
+        "p1": 1.3,
+        "p2": 0.3,
+        "p3": -0.3,
+        "c": 0.18
+      }
+    },
+    {
+      "id": 18,
+      "antecedent": [
+        "High",
+        "Medium",
+        "Low"
+      ],
+      "consequent": {
+        "p1": 1.5,
+        "p2": 0.7,
+        "p3": -0.1,
+        "c": 0.17
+      }
+    },
+    {
+      "id": 19,
+      "antecedent": [
+        "High",
+        "Medium",
+        "Medium"
+      ],
+      "consequent": {
+        "p1": 1.4,
+        "p2": 0.6,
+        "p3": -0.2,
+        "c": 0.2
+      }
+    },
+    {
+      "id": 20,
+      "antecedent": [
+        "High",
+        "High",
+        "High"
+      ],
+      "consequent": {
+        "p1": 1.6,
+        "p2": 1.2,
+        "p3": -0.5,
+        "c": 0.25
+      }
+    }
+  ],
+  "ChatGPT": [
+    {
+      "id": 1,
+      "antecedent": [
+        "Low",
+        "Low",
+        "Low"
+      ],
+      "consequent": {
+        "p1": 0.55,
+        "p2": 0.3,
+        "p3": -0.18,
+        "c": 0.08
+      }
+    },
+    {
+      "id": 2,
+      "antecedent": [
+        "Low",
+        "Low",
+        "Medium"
+      ],
+      "consequent": {
+        "p1": 0.5,
+        "p2": 0.28,
+        "p3": -0.24,
+        "c": 0.06
+      }
+    },
+    {
+      "id": 3,
+      "antecedent": [
+        "Low",
+        "Low",
+        "High"
+      ],
+      "consequent": {
+        "p1": 0.45,
+        "p2": 0.25,
+        "p3": -0.32,
+        "c": 0.05
+      }
+    },
+    {
+      "id": 4,
+      "antecedent": [
+        "Low",
+        "Medium",
+        "Low"
+      ],
+      "consequent": {
+        "p1": 0.58,
+        "p2": 0.42,
+        "p3": -0.16,
+        "c": 0.1
+      }
+    },
+    {
+      "id": 5,
+      "antecedent": [
+        "Low",
+        "Medium",
+        "High"
+      ],
+      "consequent": {
+        "p1": 0.5,
+        "p2": 0.38,
+        "p3": -0.3,
+        "c": 0.07
+      }
+    },
+    {
+      "id": 6,
+      "antecedent": [
+        "Low",
+        "High",
+        "Medium"
+      ],
+      "consequent": {
+        "p1": 0.54,
+        "p2": 0.55,
+        "p3": -0.25,
+        "c": 0.12
+      }
+    },
+    {
+      "id": 7,
+      "antecedent": [
+        "Medium",
+        "Low",
+        "Low"
+      ],
+      "consequent": {
+        "p1": 0.72,
+        "p2": 0.3,
+        "p3": -0.15,
+        "c": 0.14
+      }
+    },
+    {
+      "id": 8,
+      "antecedent": [
+        "Medium",
+        "Low",
+        "Medium"
+      ],
+      "consequent": {
+        "p1": 0.68,
+        "p2": 0.28,
+        "p3": -0.22,
+        "c": 0.11
+      }
+    },
+    {
+      "id": 9,
+      "antecedent": [
+        "Medium",
+        "Low",
+        "High"
+      ],
+      "consequent": {
+        "p1": 0.64,
+        "p2": 0.26,
+        "p3": -0.34,
+        "c": 0.09
+      }
+    },
+    {
+      "id": 10,
+      "antecedent": [
+        "Medium",
+        "Medium",
+        "Low"
+      ],
+      "consequent": {
+        "p1": 0.76,
+        "p2": 0.46,
+        "p3": -0.16,
+        "c": 0.16
+      }
+    },
+    {
+      "id": 11,
+      "antecedent": [
+        "Medium",
+        "Medium",
+        "Medium"
+      ],
+      "consequent": {
+        "p1": 0.72,
+        "p2": 0.42,
+        "p3": -0.24,
+        "c": 0.13
+      }
+    },
+    {
+      "id": 12,
+      "antecedent": [
+        "Medium",
+        "Medium",
+        "High"
+      ],
+      "consequent": {
+        "p1": 0.68,
+        "p2": 0.4,
+        "p3": -0.36,
+        "c": 0.1
+      }
+    },
+    {
+      "id": 13,
+      "antecedent": [
+        "Medium",
+        "High",
+        "Low"
+      ],
+      "consequent": {
+        "p1": 0.78,
+        "p2": 0.62,
+        "p3": -0.14,
+        "c": 0.18
+      }
+    },
+    {
+      "id": 14,
+      "antecedent": [
+        "Medium",
+        "High",
+        "High"
+      ],
+      "consequent": {
+        "p1": 0.7,
+        "p2": 0.58,
+        "p3": -0.34,
+        "c": 0.13
+      }
+    },
+    {
+      "id": 15,
+      "antecedent": [
+        "High",
+        "Low",
+        "Medium"
+      ],
+      "consequent": {
+        "p1": 0.92,
+        "p2": 0.32,
+        "p3": -0.22,
+        "c": 0.18
+      }
+    },
+    {
+      "id": 16,
+      "antecedent": [
+        "High",
+        "Low",
+        "High"
+      ],
+      "consequent": {
+        "p1": 0.88,
+        "p2": 0.3,
+        "p3": -0.38,
+        "c": 0.15
+      }
+    },
+    {
+      "id": 17,
+      "antecedent": [
+        "High",
+        "Medium",
+        "Low"
+      ],
+      "consequent": {
+        "p1": 1.0,
+        "p2": 0.5,
+        "p3": -0.14,
+        "c": 0.22
+      }
+    },
+    {
+      "id": 18,
+      "antecedent": [
+        "High",
+        "Medium",
+        "High"
+      ],
+      "consequent": {
+        "p1": 0.92,
+        "p2": 0.46,
+        "p3": -0.36,
+        "c": 0.17
+      }
+    },
+    {
+      "id": 19,
+      "antecedent": [
+        "High",
+        "High",
+        "Medium"
+      ],
+      "consequent": {
+        "p1": 1.05,
+        "p2": 0.7,
+        "p3": -0.24,
+        "c": 0.25
+      }
+    },
+    {
+      "id": 20,
+      "antecedent": [
+        "High",
+        "High",
+        "High"
+      ],
+      "consequent": {
+        "p1": 0.98,
+        "p2": 0.66,
+        "p3": -0.4,
+        "c": 0.2
+      }
+    }
+  ],
+  "Claude": [
+    {
+      "id": 1,
+      "antecedent": [
+        "Low",
+        "Low",
+        "High"
+      ],
+      "consequent": {
+        "p1": 0.4,
+        "p2": 0.25,
+        "p3": -0.35,
+        "c": 0.08
+      }
+    },
+    {
+      "id": 2,
+      "antecedent": [
+        "Low",
+        "Low",
+        "Medium"
+      ],
+      "consequent": {
+        "p1": 0.45,
+        "p2": 0.28,
+        "p3": -0.28,
+        "c": 0.1
+      }
+    },
+    {
+      "id": 3,
+      "antecedent": [
+        "Low",
+        "Low",
+        "Low"
+      ],
+      "consequent": {
+        "p1": 0.52,
+        "p2": 0.32,
+        "p3": -0.2,
+        "c": 0.12
+      }
+    },
+    {
+      "id": 4,
+      "antecedent": [
+        "Low",
+        "Medium",
+        "High"
+      ],
+      "consequent": {
+        "p1": 0.48,
+        "p2": 0.42,
+        "p3": -0.32,
+        "c": 0.09
+      }
+    },
+    {
+      "id": 5,
+      "antecedent": [
+        "Low",
+        "Medium",
+        "Medium"
+      ],
+      "consequent": {
+        "p1": 0.55,
+        "p2": 0.48,
+        "p3": -0.25,
+        "c": 0.11
+      }
+    },
+    {
+      "id": 6,
+      "antecedent": [
+        "Low",
+        "Medium",
+        "Low"
+      ],
+      "consequent": {
+        "p1": 0.62,
+        "p2": 0.55,
+        "p3": -0.18,
+        "c": 0.14
+      }
+    },
+    {
+      "id": 7,
+      "antecedent": [
+        "Low",
+        "High",
+        "Medium"
+      ],
+      "consequent": {
+        "p1": 0.58,
+        "p2": 0.65,
+        "p3": -0.22,
+        "c": 0.13
+      }
+    },
+    {
+      "id": 8,
+      "antecedent": [
+        "Low",
+        "High",
+        "Low"
+      ],
+      "consequent": {
+        "p1": 0.65,
+        "p2": 0.72,
+        "p3": -0.15,
+        "c": 0.16
+      }
+    },
+    {
+      "id": 9,
+      "antecedent": [
+        "Medium",
+        "Low",
+        "High"
+      ],
+      "consequent": {
+        "p1": 0.7,
+        "p2": 0.3,
+        "p3": -0.3,
+        "c": 0.12
+      }
+    },
+    {
+      "id": 10,
+      "antecedent": [
+        "Medium",
+        "Low",
+        "Medium"
+      ],
+      "consequent": {
+        "p1": 0.76,
+        "p2": 0.35,
+        "p3": -0.22,
+        "c": 0.15
+      }
+    },
+    {
+      "id": 11,
+      "antecedent": [
+        "Medium",
+        "Medium",
+        "High"
+      ],
+      "consequent": {
+        "p1": 0.78,
+        "p2": 0.52,
+        "p3": -0.28,
+        "c": 0.18
+      }
+    },
+    {
+      "id": 12,
+      "antecedent": [
+        "Medium",
+        "Medium",
+        "Medium"
+      ],
+      "consequent": {
+        "p1": 0.85,
+        "p2": 0.58,
+        "p3": -0.2,
+        "c": 0.22
+      }
+    },
+    {
+      "id": 13,
+      "antecedent": [
+        "Medium",
+        "Medium",
+        "Low"
+      ],
+      "consequent": {
+        "p1": 0.92,
+        "p2": 0.65,
+        "p3": -0.12,
+        "c": 0.26
+      }
+    },
+    {
+      "id": 14,
+      "antecedent": [
+        "Medium",
+        "High",
+        "High"
+      ],
+      "consequent": {
+        "p1": 0.82,
+        "p2": 0.78,
+        "p3": -0.32,
+        "c": 0.2
+      }
+    },
+    {
+      "id": 15,
+      "antecedent": [
+        "Medium",
+        "High",
+        "Low"
+      ],
+      "consequent": {
+        "p1": 0.98,
+        "p2": 0.88,
+        "p3": -0.1,
+        "c": 0.3
+      }
+    },
+    {
+      "id": 16,
+      "antecedent": [
+        "High",
+        "Low",
+        "High"
+      ],
+      "consequent": {
+        "p1": 0.95,
+        "p2": 0.38,
+        "p3": -0.25,
+        "c": 0.2
+      }
+    },
+    {
+      "id": 17,
+      "antecedent": [
+        "High",
+        "Low",
+        "Medium"
+      ],
+      "consequent": {
+        "p1": 1.05,
+        "p2": 0.42,
+        "p3": -0.18,
+        "c": 0.25
+      }
+    },
+    {
+      "id": 18,
+      "antecedent": [
+        "High",
+        "Medium",
+        "High"
+      ],
+      "consequent": {
+        "p1": 1.02,
+        "p2": 0.62,
+        "p3": -0.28,
+        "c": 0.24
+      }
+    },
+    {
+      "id": 19,
+      "antecedent": [
+        "High",
+        "Medium",
+        "Low"
+      ],
+      "consequent": {
+        "p1": 1.15,
+        "p2": 0.72,
+        "p3": -0.12,
+        "c": 0.32
+      }
+    },
+    {
+      "id": 20,
+      "antecedent": [
+        "High",
+        "High",
+        "Medium"
+      ],
+      "consequent": {
+        "p1": 1.1,
+        "p2": 0.95,
+        "p3": -0.22,
+        "c": 0.35
+      }
+    }
+  ],
+  "Gemini": [
+    {
+      "id": 1,
+      "antecedent": [
+        "Low",
+        "Low",
+        "High"
+      ],
+      "consequent": {
+        "p1": 0.4,
+        "p2": 0.3,
+        "p3": -0.2,
+        "c": 0.1
+      }
+    },
+    {
+      "id": 2,
+      "antecedent": [
+        "Low",
+        "Low",
+        "Medium"
+      ],
+      "consequent": {
+        "p1": 0.4,
+        "p2": 0.3,
+        "p3": -0.1,
+        "c": 0.15
+      }
+    },
+    {
+      "id": 3,
+      "antecedent": [
+        "Low",
+        "Low",
+        "Low"
+      ],
+      "consequent": {
+        "p1": 0.5,
+        "p2": 0.4,
+        "p3": -0.05,
+        "c": 0.2
+      }
+    },
+    {
+      "id": 4,
+      "antecedent": [
+        "Medium",
+        "Medium",
+        "High"
+      ],
+      "consequent": {
+        "p1": 0.6,
+        "p2": 0.5,
+        "p3": -0.25,
+        "c": 0.2
+      }
+    },
+    {
+      "id": 5,
+      "antecedent": [
+        "Medium",
+        "Medium",
+        "Medium"
+      ],
+      "consequent": {
+        "p1": 0.7,
+        "p2": 0.6,
+        "p3": -0.15,
+        "c": 0.25
+      }
+    },
+    {
+      "id": 6,
+      "antecedent": [
+        "Medium",
+        "Medium",
+        "Low"
+      ],
+      "consequent": {
+        "p1": 0.8,
+        "p2": 0.7,
+        "p3": -0.05,
+        "c": 0.35
+      }
+    },
+    {
+      "id": 7,
+      "antecedent": [
+        "High",
+        "High",
+        "High"
+      ],
+      "consequent": {
+        "p1": 0.9,
+        "p2": 0.8,
+        "p3": -0.3,
+        "c": 0.3
+      }
+    },
+    {
+      "id": 8,
+      "antecedent": [
+        "High",
+        "High",
+        "Medium"
+      ],
+      "consequent": {
+        "p1": 1.0,
+        "p2": 0.9,
+        "p3": -0.2,
+        "c": 0.4
+      }
+    },
+    {
+      "id": 9,
+      "antecedent": [
+        "High",
+        "High",
+        "Low"
+      ],
+      "consequent": {
+        "p1": 1.2,
+        "p2": 1.1,
+        "p3": -0.1,
+        "c": 0.5
+      }
+    },
+    {
+      "id": 10,
+      "antecedent": [
+        "High",
+        "Low",
+        "High"
+      ],
+      "consequent": {
+        "p1": 0.8,
+        "p2": 0.6,
+        "p3": -0.2,
+        "c": 0.25
+      }
+    },
+    {
+      "id": 11,
+      "antecedent": [
+        "Low",
+        "High",
+        "Medium"
+      ],
+      "consequent": {
+        "p1": 0.4,
+        "p2": 0.5,
+        "p3": -0.15,
+        "c": 0.2
+      }
+    },
+    {
+      "id": 12,
+      "antecedent": [
+        "Medium",
+        "Low",
+        "High"
+      ],
+      "consequent": {
+        "p1": 0.6,
+        "p2": 0.4,
+        "p3": -0.2,
+        "c": 0.15
+      }
+    },
+    {
+      "id": 13,
+      "antecedent": [
+        "Medium",
+        "High",
+        "Low"
+      ],
+      "consequent": {
+        "p1": 0.7,
+        "p2": 0.9,
+        "p3": -0.05,
+        "c": 0.4
+      }
+    },
+    {
+      "id": 14,
+      "antecedent": [
+        "High",
+        "Medium",
+        "Medium"
+      ],
+      "consequent": {
+        "p1": 0.9,
+        "p2": 0.7,
+        "p3": -0.2,
+        "c": 0.35
+      }
+    },
+    {
+      "id": 15,
+      "antecedent": [
+        "Low",
+        "Medium",
+        "Low"
+      ],
+      "consequent": {
+        "p1": 0.5,
+        "p2": 0.6,
+        "p3": -0.1,
+        "c": 0.25
+      }
+    },
+    {
+      "id": 16,
+      "antecedent": [
+        "Medium",
+        "High",
+        "High"
+      ],
+      "consequent": {
+        "p1": 0.6,
+        "p2": 0.7,
+        "p3": -0.3,
+        "c": 0.2
+      }
+    },
+    {
+      "id": 17,
+      "antecedent": [
+        "Low",
+        "High",
+        "High"
+      ],
+      "consequent": {
+        "p1": 0.3,
+        "p2": 0.4,
+        "p3": -0.2,
+        "c": 0.1
+      }
+    },
+    {
+      "id": 18,
+      "antecedent": [
+        "High",
+        "Low",
+        "Low"
+      ],
+      "consequent": {
+        "p1": 1.1,
+        "p2": 0.8,
+        "p3": -0.05,
+        "c": 0.45
+      }
+    },
+    {
+      "id": 19,
+      "antecedent": [
+        "Medium",
+        "Low",
+        "Medium"
+      ],
+      "consequent": {
+        "p1": 0.7,
+        "p2": 0.5,
+        "p3": -0.15,
+        "c": 0.2
+      }
+    },
+    {
+      "id": 20,
+      "antecedent": [
+        "High",
+        "Medium",
+        "High"
+      ],
+      "consequent": {
+        "p1": 0.8,
+        "p2": 0.6,
+        "p3": -0.3,
+        "c": 0.25
+      }
+    }
+  ]
+}

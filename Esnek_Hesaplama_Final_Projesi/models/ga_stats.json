@@ -1,0 +1,11 @@
+{
+  "best_rmse_train": 0.1838,
+  "best_rmse_test": 0.168,
+  "final_rmse_train": 0.2192,
+  "final_rmse_test": 0.1938,
+  "generations": 100,
+  "pop_size": 50,
+  "crossover_rate": 0.8,
+  "mutation_rate": 0.05,
+  "active_rules_best": 13
+}
