@@ -1,45 +1,32 @@
-# Sugeno FIS ile Yazilim Efor Tahmini
-**Esnek Hesaplama Donem Projesi**
+# Sugeno FIS ile Yazılım Efor Tahmini
 
-Desharnais yazilim projesi veri seti uzerinde Sugeno tipi Bulanik Cikarsama Sistemi (FIS) 
-kurarak yazilim efor tahmini yapan proje.
+**Esnek Hesaplama Dönem Projesi**
+
+Bu proje, Desharnais ve Albrecht veri setleri üzerinde **Sugeno tipinde Bulanik Çıkarım Sistemi (FIS)** oluşturup, yazılım efor tahmini yapar. Ayrıca klasik makine öğrenmesi modelleri ve **K‑Means kümeleme temelli regresör** ile karşılaştırmalar sunar.
 
 ---
 
-## Klasor Yapisi
+## Klasör Yapısı
 
-```
-Esnek_Hesaplama_Donem_Projesi/
-|-- src/                        Python kaynak kodlari
-|   |-- 01_eda_desharnais.py    Asama 1: Veri Analizi
-|   |-- 02_fuzzy_mf_design.py   Asama 2: Uyelik Fonksiyonu Tasarimi
-|   |-- 03_rule_base_analysis.py Asama 3: Kural Tabani (4 LLM)
-|   |-- 04_sugeno_models.py     Asama 4: Model Egitimi
-|   |-- 05_performance_comparison.py  Asama 5: Performans Analizi
-|   |-- 06_interpretation_analysis.py Asama 6: Yorumlama
-|-- output/                     Uretilen grafikler ve CSV dosyalari
-|   |-- korelasyon_heatmap.png
-|   |-- outlier_boxplots.png
-|   |-- membership_functions_input.png
-|   |-- membership_functions_output.png
-|   |-- rule_coverage_all_models.png
-|   |-- sugeno_model_analysis.png
-|   |-- performance_comparison.png
-|   |-- interpretation_analysis.png
-|   |-- performance_results.csv
-|   |-- cv_results.csv
-|-- models/                     Egitilmis model dosyalari
-|   |-- scaler_X.pkl / scaler_y.pkl
+```text
+Esnek_Hesaplama_Dönem_Projesi/
+|-- src/                        # Python kaynak kodları
+|   |-- 01_eda_desharnais.py    # Aşama 1: Veri analizi (IQR box‑plot)
+|   |-- 01_eda_albrecht.py     # Aşama 1: Veri analizi (IQR box‑plot)
+|   |-- 02_fuzzy_mf_design.py   # Aşama 2: Üyelik fonksiyonları tasarımı
+|   |-- 03_rule_base_analysis.py # Aşama 3: Kural seti analizi (4 LLM)
+|   |-- 04_sugeno_models.py     # Aşama 4: Sugeno model eğitimi
+|   |-- 05_performance_comparison.py # Aşama 5: Performans karşılaştırması (LR, DT, KMeansRegressor, Sugeno)
+|   |-- 06_interpretation_analysis.py # Aşama 6: Açıklanabilirlik ve senaryo analizi (IQR‑temelli gerçek değerler)
+|-- output/                     # Üretilen grafikler ve CSV dosyaları
+|-- models/                     # Eğitilmiş model dosyaları
+|   |-- scaler_X.pkl, scaler_y.pkl
 |   |-- mf_parameters.json
-|   |-- rule_sets.json          4 LLM kural seti
-|   |-- coefficients_*.npy      Ogrenilen Sugeno katsayilari
-|   |-- desharnais_train_clean.csv
-|   |-- desharnais_test_clean.csv
-|-- dataset/
-|   |-- desharnais.csv          Ham veri seti
-|-- Esnek Hesaplama Donem Projesi.docx  Odev tanimi
-|-- Sugeno_FIS_Yazilim_Efor_Tahmini_Rapor.docx  Proje raporu
-|-- README.md
+|   |-- rule_sets.json
+|   |-- coefficients_*.npy
+|-- dataset/                    # Ham veri setleri
+|-- README.md                   # Bu dosya
+|-- presentation.txt            # Sunum metni (bu dosya)
 ```
 
 ---
@@ -52,69 +39,90 @@ pip install pandas numpy matplotlib seaborn scikit-learn scikit-fuzzy joblib sci
 
 ---
 
-## Calistirma Sirasi
+## Çalıştırma Sırası
 
-Asagilaki komutlari **proje kok dizininden** sirasiyla calistirin:
+Projeyi kök dizinden aşağıdaki adımları sırayla çalıştırın:
 
 ```bash
-# Asama 1: Veri analizi, normalizasyon, egitim/test bolunmesi
+# Aşama 1 – Veri analizi ve IQR‑box‑plot
 python src/01_eda_desharnais.py
+python src/01_eda_albrecht.py
 
-# Asama 2: Uyelik fonksiyonlari tasarimi (giris + cikis MF grafikleri)
+# Aşama 2 – Üyelik fonksiyonları tasarımı
 python src/02_fuzzy_mf_design.py
 
-# Asama 3: 4 LLM kural seti analizi (Student, ChatGPT, Claude, Gemini)
+# Aşama 3 – Kural seti analizi (4 LLM)
 python src/03_rule_base_analysis.py
 
-# Asama 4: Sugeno model egitimi (LeastSquares + GradientDescent)
+# Aşama 4 – Sugeno model eğitimi (Least Squares & Gradient Descent)
 python src/04_sugeno_models.py
 
-# Asama 5: Performans karsilastirmasi (Sugeno vs LR vs DT)
+# Aşama 5 – Performans karşılaştırması
+#   - Linear Regression, Decision Tree ve yeni KMeansRegressor (klasik basamak) 
+#   - Sugeno modelleri (Model A & Model B)
 python src/05_performance_comparison.py
 
-# Asama 6: Yorumlama ve aciklanabilirlik analizi
+# Aşama 6 – Açıklanabilirlik & Senaryo Analizi
+#   • Gerçek (inverse‑scaled) değerler
+#   • IQR‑temelli "Düşük / Orta / Yüksek" sınıflandırması
 python src/06_interpretation_analysis.py
 ```
 
 ---
 
-## Proje Ozeti
+## Yeni Eklemeler
 
-### Kullanilan Veri Seti
-- **Desharnais Dataset**: 77 yazilim projesi, 11 ozellik
-- **Giris Degiskenleri**: PointsAjust (Fonksiyon Noktasi), Length (Sure), TeamExp (Deneyim)
-- **Hedef Degisken**: Effort (adam-saat)
+### K‑Means Regresör (Baseline)
+* `src/05_performance_comparison.py` dosyasına **KMeansRegressor** sınıfı eklendi.
+* K‑Means kümeleme, girdileri *n_clusters* (varsayılan 4) gruplar ve her küme için ortalama `Effort` değeri hesaplanır. Tahmin, yeni örnek ilgili kümeye atanıp o kümenin ortalama eforu döndürür.
+* Bu basit model, klasik Linear Regression ve Decision Tree modelleriyle aynı tablo ve grafiklerde gösterilir, böylece **“Box Plot veya Kümeleme algoritmaları”** önerisine doğrudan yanıt verilir.
 
-### Fuzzy Model Yapisi
-- **Uyelik Fonksiyonlari**: Gaussian, Triangular, Trapezoidal (3 MF/degisken)
-- **Linguistik Degerler**: Low (Dusuk), Medium (Orta), High (Yuksek)
-- **Kural Sayisi**: Her LLM icin 20 kural
-
-### Kural Setleri (LLM Karsilastirmasi)
-| LLM     | Kural Sayisi | Odak Degiskeni         |
-|---------|-------------|------------------------|
-| Student | 20          | PointsAjust agirlikli  |
-| ChatGPT | 20          | Dengeli p1/p2          |
-| Claude  | 20          | Denge odakli           |
-| Gemini  | 20          | Length odakli          |
-
-### Ogrenim Yontemleri
-- **Model A**: En Kucuk Kareler (Least Squares) - analitik
-- **Model B**: Gradient Descent + L2 Regularizasyon - iteratif
-
-### Karsilastirma Modelleri
-- Linear Regression
-- Decision Tree Regressor (max_depth=5)
+### IQR‑Temelli Kategorilendirme
+* `src/06_interpretation_analysis.py` içinde `get_iqr_category(value, series)` fonksiyonu tanımlandı.
+* Eğitim verisinin **Q1 (%25)** ve **Q3 (%75)** değerleri kullanılarak her özelliğin gerçek (ters ölçeklenmiş) değeri **Düşük / Orta / Yüksek** olarak etiketlenir.
+* Sunumda, bu etiketlerin kutu grafiğindeki çeyrek sınırlarıyla bire bir eşleştiği vurgulanır.
 
 ---
 
-## Sonuclar
+## Proje Özeti
 
-`output/performance_results.csv` dosyasinda tum modellerin RMSE, MAE, MAPE, R2 sonuclari bulunmaktadir.
+### Kullanılan Veri Setleri
+1. **Desharnais** –  proje, özellikler: `PointsAjust`, `Length`, `TeamExp`; hedef `Effort`.
+2. **Albrecht** – 24 proje, özellikler: `Input`, `Output`, `File`; hedef `Effort`.
 
-**Temel Bulgular:**
-- Model B (Gradient Descent) her kural seti icin Model A'dan daha iyi test performansi gosterir
-- Klasik modeller (LR, DT) Sugeno modellerine gore daha yuksek R2 saglar
-- Sugeno modellerinin avantaji: aciklanabilirlik ve kural bazli karar mekanizmasi
+### Sugeno Modeli
+* Üyelik fonksiyonları (Gaussian, Triangular) üç dilsel değer (*Low, Medium, High*) üretir.
+* 4 LLM (Student, ChatGPT, Claude, Gemini) için **her birinde 20 kural** oluşturuldu – toplam 80 kural.
+* Model A: En Küçük Kareler (analitik çözüm).
+* Model B: Gradient Descent + L2 regularizasyon (iteratif, daha iyi performans).
+
+### Neden Sugeno?
+* **Açıklanabilirlik** – Her kural doğal dilde (`IF … THEN …`) ifade edilir.
+* **Bulunabilir Üyelik Fonksiyonları** – Fuzzy C‑Means kümeleme ile otomatik olarak merkezler belirlenir, subjektif tercih azaltılır.
+* **Parçalı Lineer Çıktı** – Sonuç lineer kombinasyon, analiz ve yorumlama kolaydır.
+
+### Neden IQR (Box Plot)?
+* Outlier (uç değer) tespiti için **IQR** en güvenilir istatistiklerden biridir.
+* **Winsorization** ile uç değerler sınırlandırılır, modelin aşırı etkilenmesi önlenir.
+* Box‑plot görselleştirmesi, veri dağılımını hızlıca göstermek ve **Düşük/Orta/Yüksek** dilsel sınıflandırma temeli sunmak için ideal.
 
 ---
+
+## Sonuçlar (output dizinindeki CSV dosyalarından)
+* `*_performance_results.csv` – RMSE, MAE, MAPE, R2, %25‑25 hata aralığı (Accuracy) değerleri.
+* **K‑MeansRegressor** ortalama RMSE/MAE değerleri, klasik modellerle kıyaslandığında makul bir baseline sağlar.
+* **Sugeno Model B** genellikle en yüksek doğruluk ve açıklanabilirlik dengesi sunar.
+
+---
+
+## Sunum İçin Hazırlanan Metin (`presentation.txt`)
+* Bu dosya aynı klasörde bulunur ve `cat presentation.txt` ya da bir metin editöründe açılarak doğrudan slayt açıklaması olarak kullanılabilir.
+
+---
+
+## Katkıda Bulunma
+* Sorularınız ve önerileriniz için `issues` bölümünü kullanabilirsiniz.
+
+---
+
+*Bu README, projenin tüm adımlarını, yeni eklemeleri ve akademik arka planı kapsar. Sunum sırasında her bölümü sırayla anlatarak hoca ve dinleyicilerin sorularına hazır olabilirsiniz.*

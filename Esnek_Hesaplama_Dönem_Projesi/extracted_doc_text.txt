@@ -1,0 +1,79 @@
+Sugeno Fuzzy Inference System ile Yazılım Efor Tahmini Yapılması
+
+1. Amaç
+Öğrencilerin:
+Sugeno FIS kurması 
+Membership function tasarlaması 
+Rule-base oluşturması 
+Modeli veri ile eğitmesi ve yorumlaması 
+
+2. Problem Tanımı
+Bir gerçek veri seti üzerinde:
+Girdi değişkenlerini fuzzify ederek 
+Sugeno model kurarak 
+Tahmin / sınıflandırma yapılacaktır 
+
+3. Veri Setleri
+ISBSG Software Effort Dataset 
+Albrecht Dataset ve Desharnais Dataset 
+Software effort estimation datasets
+Yazılım efor tahmini problemi 
+
+4. Yapılacaklar
+🔹 Aşama 1 – Veri Analizi
+Outlier analizi 
+Normalizasyon 
+
+🔹 Aşama 2 – Fuzzy Model Tasarımı
+En az: 
+3 membership function / değişken 
+MF tipleri: 
+Gaussian / Triangular / Trapezoidal 
+
+🔹 Aşama 3 – Rule Base
+Minimum 20 kural 
+Kurallarda 3 ayrı LLM’in çıkardığı kurallar karşılaştırılacaktır
+Chatgpt – Claude, Chatgpt- Gemini, Claude- Gemini
+
+🔹 Aşama 4 – Sugeno Model
+2 model kurulacak:  (Öğrenci Sugeno modelindeki ağırlıkların nasıl öğreneceğini kendi araştıracaktır)
+First-order Sugeno  (Birinci Derece Sugeno ) yeterli
+
+🔹 Aşama 5 – Performans Analizi
+Accuracy / RMSE /MAE /MAPE
+Karşılaştırma: 
+Linear Regression 
+Decision Tree Regressor
+
+🔹 Aşama 6 – Yorumlama (kritik)
+Hangi kurallar baskın?  LLM’lerin önerdiği kuralların performansa etkisini araştırınız.
+Sistem neden böyle karar veriyor? 
+Sonuçların açıklanabilirlik raporu 
+
+5. Önemli
+Öğrenciler:
+Kod üretebilir  olmalı
+MF parametrelerini açıklamak zorunda. Hem MF’ler hem de output çizilerek gösterilmeli. 
+Rule-base’i kendileri yorumlamak zorunda 
+“neden bu model?” sorusuna cevap vermek zorunda 
+
+6. Teslim
+Kod 
+Rapor (15 sayfa civarı) 
+15 dk sunum 
+
+7. Değerlendirme
+Kriter
+Yüzde
+Model doğruluğu
+20%
+Fuzzy tasarım kalitesi
+20%
+Yorumlama (en kritik)
+25%
+Karşılaştırmalı analiz
+15%
+Sunum
+20%
+
+Yaptığınız projenin tüm adımlarının raporlanması beklenmektedir. Ekampüse hem kodlarınız hem de ödev raporunuzu eklemeniz gerekmektedir. Tüm dosyaları (projenin raporu, kodları ve sunumunuzu) " birinci_ogrenci_adi_numarasi_ ikinci_ogrenci_adi_numarasi_.rar" olarak yüklemeniz gerekmektedir. Ödev sunumlarınız kalan haftalar yetişmeyeceği için mutlaka Youtube üzerine koyduğunuz videolara göre değerlendireceğim. Youtube'a video eklemeyen ama ekampüse rapor ve kodlarını gönderen öğrencilerin projesi değerlendirilemeyecektir. Youtube'a video yükleme ve ekampüse ilgili "rar" dosyasını son yükleme tarihi 9 Haziran 2026 perşembe saat 23:59'a kadardır. Süre az kaldığı için bu tarihten sonra yüklenen ödevlet ve videolar kabul edilmeyecektir. Öğrencinin ödevden not alabilmesi için video yüklemesi ve ekampüs'e proje raporu ve kodları içeren sıkıştırılmış dosyayı yüklemesi gerekmektedir. Başarılar dilerim.

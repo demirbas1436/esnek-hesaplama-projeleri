@@ -1,11 +1,11 @@
 """
-Asama 1: Veri Analizi (EDA)
+Asama 1: Veri Analizi (EDA) - Albrecht Veri Seti
 - Outlier analizi (IQR yontemi)
 - Winsorize ile outlier temizleme
 - Normalizasyon (Min-Max)
 - Ozellik secimi
 - Egitim/test bolunmesi
-Calistirma: python src/01_eda_desharnais.py
+Calistirma: python src/01_eda_albrecht.py
 """
 import pathlib
 import pandas as pd
@@ -32,10 +32,10 @@ sns.set_palette("husl")
 # ============================
 # 1. VERİYİ YÜKLE
 # ============================
-df = pd.read_csv(DATASET_DIR / 'desharnais.csv')
+df = pd.read_csv(DATASET_DIR / 'albrecht.csv')
 
 print("=" * 50)
-print("ILK 5 SATIR")
+print("ALBRECHT ILK 5 SATIR")
 print("=" * 50)
 print(df.head())
 
@@ -75,26 +75,26 @@ print("=" * 50)
 corr_with_effort = df_clean.corr(numeric_only=True)['Effort'].sort_values(ascending=False)
 print(corr_with_effort)
 
-plt.figure(figsize=(12, 10))
+plt.figure(figsize=(10, 8))
 mask = np.triu(np.ones_like(df_clean.corr(numeric_only=True), dtype=bool))
 sns.heatmap(df_clean.corr(numeric_only=True),
             annot=True, fmt=".2f", cmap='RdYlBu_r',
             mask=mask, square=True, linewidths=0.5,
             cbar_kws={"shrink": 0.8})
-plt.title('Desharnais Veri Seti - Korelasyon Matrisi', fontsize=16, pad=20)
+plt.title('Albrecht Veri Seti - Korelasyon Matrisi', fontsize=16, pad=20)
 plt.tight_layout()
-plt.savefig(OUTPUT_DIR / "korelasyon_heatmap.png", dpi=150, bbox_inches='tight')
+plt.savefig(OUTPUT_DIR / "albrecht_korelasyon_heatmap.png", dpi=150, bbox_inches='tight')
 plt.close()
-print("[OK] korelasyon_heatmap.png kaydedildi.")
+print("[OK] albrecht_korelasyon_heatmap.png kaydedildi.")
 
 # ============================
 # 4. OUTLIER ANALİZİ (Boxplot)
 # ============================
 numeric_cols = df_clean.select_dtypes(include=[np.number]).columns.tolist()
-if 'Project' in numeric_cols:
-    numeric_cols.remove('Project')
+if 'id' in numeric_cols:
+    numeric_cols.remove('id')
 
-fig, axes = plt.subplots(3, 4, figsize=(18, 12))
+fig, axes = plt.subplots(2, 4, figsize=(18, 8))
 axes = axes.ravel()
 for idx, col in enumerate(numeric_cols):
     if idx < len(axes):
@@ -103,11 +103,11 @@ for idx, col in enumerate(numeric_cols):
         axes[idx].set_ylabel('')
 for idx in range(len(numeric_cols), len(axes)):
     axes[idx].set_visible(False)
-plt.suptitle('Outlier Analizi - Boxplotlar', fontsize=16, y=1.02)
+plt.suptitle('Albrecht Outlier Analizi - Boxplotlar', fontsize=16, y=1.02)
 plt.tight_layout()
-plt.savefig(OUTPUT_DIR / "outlier_boxplots.png", dpi=150, bbox_inches='tight')
+plt.savefig(OUTPUT_DIR / "albrecht_outlier_boxplots.png", dpi=150, bbox_inches='tight')
 plt.close()
-print("[OK] outlier_boxplots.png kaydedildi.")
+print("[OK] albrecht_outlier_boxplots.png kaydedildi.")
 
 # ============================
 # 5. IQR İLE OUTLIER TESPİTİ
@@ -148,17 +148,16 @@ axes[0].set_title('Effort - Orijinal (Outlierlar Dahil)')
 sns.histplot(df_processed['Effort'], kde=True, ax=axes[1], color='mediumseagreen')
 axes[1].set_title('Effort - Winsorize Sonrasi')
 plt.tight_layout()
-plt.savefig(OUTPUT_DIR / "effort_karsilastirma.png", dpi=150, bbox_inches='tight')
+plt.savefig(OUTPUT_DIR / "albrecht_effort_karsilastirma.png", dpi=150, bbox_inches='tight')
 plt.close()
-print("[OK] effort_karsilastirma.png kaydedildi.")
+print("[OK] albrecht_effort_karsilastirma.png kaydedildi.")
 
 # ============================
 # 7. ÖZELLİK SEÇİMİ
 # ============================
-# Fuzzy model icin 3 girdi degiskeni: PointsAjust, Length, TeamExp
-# (Yuksek korelasyonlu, yorumlanabilir)
-feature_cols = ['TeamExp', 'ManagerExp', 'Length', 'Transactions',
-                'Entities', 'PointsAjust', 'Language']
+# Fuzzy model icin 3 girdi degiskeni: Input, Output, File
+# (Islev noktasi analizinin temel bilesenleri, yuksek korelasyonlu)
+feature_cols = ['Input', 'Output', 'Inquiry', 'File', 'FPAdj', 'RawFPcounts', 'AdjFP']
 target_col = 'Effort'
 
 X = df_processed[feature_cols]
@@ -207,19 +206,15 @@ train_df['Effort'] = y_train_scaled
 test_df  = X_test_scaled.copy()
 test_df['Effort']  = y_test_scaled
 
-train_df.to_csv(MODELS_DIR / "desharnais_train_clean.csv", index=False)
-test_df.to_csv(MODELS_DIR  / "desharnais_test_clean.csv",  index=False)
-joblib.dump(scaler_X, MODELS_DIR / "scaler_X.pkl")
-joblib.dump(scaler_y, MODELS_DIR / "scaler_y.pkl")
-joblib.dump(scaler_X, MODELS_DIR / "desharnais_scaler_X.pkl")
-joblib.dump(scaler_y, MODELS_DIR / "desharnais_scaler_y.pkl")
+train_df.to_csv(MODELS_DIR / "albrecht_train_clean.csv", index=False)
+test_df.to_csv(MODELS_DIR  / "albrecht_test_clean.csv",  index=False)
+joblib.dump(scaler_X, MODELS_DIR / "albrecht_scaler_X.pkl")
+joblib.dump(scaler_y, MODELS_DIR / "albrecht_scaler_y.pkl")
 
 print("\n" + "=" * 50)
 print("KAYIT TAMAMLANDI")
 print("=" * 50)
-print(f"  -> {MODELS_DIR / 'desharnais_train_clean.csv'}")
-print(f"  -> {MODELS_DIR / 'desharnais_test_clean.csv'}")
-print(f"  -> {MODELS_DIR / 'scaler_X.pkl'} / scaler_y.pkl")
-print(f"  -> {MODELS_DIR / 'desharnais_scaler_X.pkl'} / desharnais_scaler_y.pkl")
-print(f"  -> {OUTPUT_DIR / 'korelasyon_heatmap.png'}")
-
+print(f"  -> {MODELS_DIR / 'albrecht_train_clean.csv'}")
+print(f"  -> {MODELS_DIR / 'albrecht_test_clean.csv'}")
+print(f"  -> {MODELS_DIR / 'albrecht_scaler_X.pkl'} / albrecht_scaler_y.pkl")
+print(f"  -> {OUTPUT_DIR / 'albrecht_korelasyon_heatmap.png'}")
